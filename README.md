@@ -16,5 +16,5 @@ Steps for the feature implementation: <br />
 -> Create a route and then create a super short application over that route to demonstrate functionality of that feature (super important). <br />
 -> If you have some specific folder structure , you can mention that in documentation file. <br />
 
-And meanwhile don't forget to join the discord channel "react-approaches-practices" https://discord.gg/E4grGJt4
+And meanwhile don't forget to join the discord channel "react-approaches-practices" https://discord.gg/E4grGJt4 <br />
 Happy Coding :)
