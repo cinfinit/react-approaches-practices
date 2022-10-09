@@ -7,3 +7,10 @@ Steps for the feature implementation:
 -> Create a documentation file for whatever feature/approach that you are mentioning . 
 -> Create a route and then create a super short application over that route to demonstrate functionality of that feature (super important). 
 -> If you have some specific folder structure , you can mention that in documentation file. 
+
+and Add your name , along with the feature name in this file <br/>
+Example <br/>
+ {
+  name :"hack",
+  feature : "showcased redux implementation"
+ }
