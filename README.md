@@ -1,4 +1,4 @@
-# react-approaches-pratices
+# react-approaches-practices
 This Repo would basically contain different approaches used while making react application , it can be state-management , fetching , and many more .
 This repo could potentially be a good learning curve for people who are starting out with react . 
 
