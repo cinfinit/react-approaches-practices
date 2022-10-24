@@ -10,7 +10,12 @@ Steps for the feature implementation:
 
 and Add your name , along with the feature name in this file <br/>
 Example <br/>
- {
-  name :"hack",
-  feature : "showcased redux implementation"
- }
+ [
+    {
+    name :"hack",
+    feature : "showcased redux implementation"
+    },{
+    name:"Rajagopal",
+    feature: "Demonstrate userequest hook"
+    }
+ ]

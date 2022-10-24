@@ -17,14 +17,9 @@ const flex ={
 };
 
 function ChoosePet() {
-    const { data, error, loading} = useRequest('https://dog.ceo/api/breeds/list/all');
+    const { data, error, loading} = useRequest('https://dog.ceo/api/breeds/list/all'); //use customHook to retrieve data
     const [breed, setBreed] = useState("akita");
-    let dogs = [];
-    if(!loading && !error){
-        dogs = Object.keys(data.message).filter(dog => data.message[dog].length <= 0);
-        const subbreed = Object.keys(data.message).filter(dog => data.message[dog].length > 0);
-        subbreed.forEach(b => data.message[b].forEach(sb => dogs.push(b+"/"+sb)));
-    }
+    const dogs = !loading && !error ? getBreeds():[] //Call only if loaded and no error
     return (
         <div style= {style} >
             { loading ? 
@@ -37,12 +32,23 @@ function ChoosePet() {
                         {dogs.map(breed => ( <option key={breed} value={breed}>{breed}</option>))}
                     </select>
                 </div> 
-                <Link to="/pets/view" state={{breed:breed}}>
+                <Link to="/pets/view" state={{breed:breed}}> {/* Pass breed data to link to be used by other component */}
                     <button>View Pet</button>
                 </Link>
             </div>}
         </div>
     );
+    
+    /**
+     * Returns all dog breeds by processing the response
+     * @returns String[]
+     */
+    function getBreeds() {
+        const dogs = Object.keys(data.message).filter(dog => data.message[dog].length <= 0);
+        const subbreed = Object.keys(data.message).filter(dog => data.message[dog].length > 0);
+        subbreed.forEach(b => data.message[b].forEach(sb => dogs.push(b + "/" + sb)));
+        return dogs;
+    }
 }
 
 
